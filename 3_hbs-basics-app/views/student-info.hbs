@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <h1>Información de reserva para {{fullName}}</h1>
+    <hr>
+    <p>Estos son los datos para tu reserva de {{{bootcamp}}} en {{campus}}</p>
+
+    <hr>
+
+    <p>Las asignaturas del bootcamp son:</p>
+
+    <ul>
+        {{#each subjects}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+
+    <hr>
+
+    {{#if debt}}
+    <p>Tienes una deuda actual de {{debt}}€</p>
+    {{else}}
+    <p>Estás al corriente de pagos</p>
+    {{/if}}
+
+
+    <hr>
+
+    {{#if teacher}}
+    <p>Tu profe es {{teacher}}€</p>
+    {{else}}
+    <p>Ya te diremos con quién te toca</p>
+    {{/if}}
+
+    <hr>
+
+    {{#unless confirmed}}
+    <p>AVISO tu plaza no está confirmada lol </p>
+    {{/unless}}
+
+    <hr>
+
+    {{#with address}}
+    <p>Vives en la calle {{street}}, cp {{zipCode}}</p>
+    {{/with}}
+</body>
+
+</html>

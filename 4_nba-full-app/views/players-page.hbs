@@ -1,0 +1,27 @@
+<div class="container">
+
+    <h1>Jugadores</h1>
+
+    <hr>
+
+    <div class="row">
+
+        {{#each playersInfo}}
+        <div class="col-md-4">
+            <article class="player-card">
+                <img src="{{photo}}" alt="{{name}} {{lastName}}">
+                <p>{{name}} {{lastName}} ({{team}})</p>
+            </article>
+
+            {{!-- bonus con partial --}}
+            {{!-- {{>playerCard}} --}}
+        </div>
+        {{/each}}
+
+    </div>
+
+    <hr>
+
+    <a href="/" class="btn btn-dark mt-3 mb-5">Volver a inicio</a>
+
+</div>
